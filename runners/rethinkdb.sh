@@ -22,7 +22,7 @@ fi
 # RethinkDB needs the real IP to run
 if [ -z "$REAL_IP" ]; then
 	echo 'Please set the REAL_IP env var first.'
-	echo "Your real IP seems to be: $(curl -s ipecho.net/plain). Bye..."
+	echo "Your IPv4 seems to be: $(curl -s -4 icanhazip.com) Bye..."
 else
 	echo "Running dockerfile/rethinkdb on host $REAL_IP, joining host $RETHINKDB_JOIN_IP"
 	docker run \
