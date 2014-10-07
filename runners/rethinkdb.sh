@@ -13,7 +13,7 @@ fi
 
 # Is this the first host of the cluster or are we joining an existing cluster?
 if [ -z "$RETHINKDB_JOIN_IP" ]; then
-	RETHINKDB_JOIN_CMD=':'
+	RETHINKDB_JOIN_CMD='&& :'
 	RETHINKDB_JOIN_IP='<none>'
 else
 	RETHINKDB_JOIN_CMD="--join $RETHINKDB_JOIN_IP"
