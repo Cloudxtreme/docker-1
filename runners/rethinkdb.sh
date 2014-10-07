@@ -4,7 +4,6 @@
 # Optionally you can specify where to store the data (RETHINKDB_DATA_DIR)
 # and to join an existing cluster (RETHINKDB_JOIN_IP)  
 
-set -e
 DEBIAN_FRONTEND=noninteractive
 
 # Setting a default for the data dir location
