@@ -6,6 +6,8 @@ DEBIAN_FRONTEND=noninteractive
 
 docker run \
 	-d \
-	-p 5000:80 \
+	-p 5000:5000 \
+	-e "RETHINKDB_AUTHKEY=d0llad0llabilly4ll_rethinkdb" \
+	--link rethinkdb:rethinkdb \
 	--name api \
-	lavab/api
+	andreis/api

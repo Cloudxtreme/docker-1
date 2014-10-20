@@ -12,12 +12,12 @@ if [ -z "$RETHINKDB_DATA_DIR" ]; then
 fi
 
 # Is this the first host of the cluster or are we joining an existing cluster?
-if [ -z "$RETHINKDB_JOIN_IP" ]; then
-	RETHINKDB_JOIN_CMD='&& :'
-	RETHINKDB_JOIN_IP='<none>'
-else
-	RETHINKDB_JOIN_CMD="--join $RETHINKDB_JOIN_IP"
-fi
+#if [ -z "$RETHINKDB_JOIN_IP" ]; then
+#	RETHINKDB_JOIN_CMD='&& :'
+#	RETHINKDB_JOIN_IP='<none>'
+#else
+#	RETHINKDB_JOIN_CMD="--join $RETHINKDB_JOIN_IP"
+#fi
 
 # RethinkDB needs the real IP to run
 if [ -z "$REAL_IP" ]; then
@@ -36,6 +36,6 @@ else
 		rethinkdb \
 			--bind all \
 			--canonical-address $REAL_IP \
-			--machine-name `hostname | sed 's/-/_/g'` \
-			$RETHINKDB_JOIN_CMD
+			--machine-name `hostname | sed 's/-/_/g'` #\
+#			$RETHINKDB_JOIN_CMD
 fi
