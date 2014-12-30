@@ -10,5 +10,7 @@ docker run \
 	-e "RETHINKDB_AUTHKEY=d0llad0llabilly4ll_rethinkdb" \
 	-e "API_HOST=api.lavaboom.io" \
 	--link rethinkdb:rethinkdb \
+	--link redis:redis \
+	--link nats:nats \
 	--name api \
 	andreis/api
