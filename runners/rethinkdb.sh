@@ -28,13 +28,13 @@ else
 	docker run \
 		--name rethinkdb \
 		-d \
-		-p 8080:8080 \
+		-p 127.0.0.1:8080:8080 \
 		-p 28015:28015 \
 		-p 29015:29015 \
 		-v /data/rethinkdb:/data \
 		dockerfile/rethinkdb \
 		rethinkdb \
-			--bind all \
+			--bind '127.0.0.1' \
 			--canonical-address $REAL_IP \
 			--machine-name `hostname | sed 's/-/_/g'` #\
 #			$RETHINKDB_JOIN_CMD

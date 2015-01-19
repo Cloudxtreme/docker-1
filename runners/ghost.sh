@@ -18,7 +18,7 @@ fi
 echo "Running Ghost on port $GHOST_PORT and data directory $GHOST_DATA ..."
 docker run \
 	-d \
-	-p $GHOST_PORT:2368 \
+	-p 127.0.0.1:$GHOST_PORT:2368 \
 	-v $GHOST_DATA:/ghost-override \
 	--name ghost \
 	lavab/ghost
