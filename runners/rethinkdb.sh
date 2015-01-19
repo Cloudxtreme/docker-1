@@ -34,7 +34,7 @@ else
 		-v /data/rethinkdb:/data \
 		dockerfile/rethinkdb \
 		rethinkdb \
-			--bind '127.0.0.1' \
+			--bind all \
 			--canonical-address $REAL_IP \
 			--machine-name `hostname | sed 's/-/_/g'` #\
 #			$RETHINKDB_JOIN_CMD
