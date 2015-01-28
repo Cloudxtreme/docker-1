@@ -28,9 +28,9 @@ else
 	docker run \
 		--name rethinkdb \
 		-d \
-		-p 127.0.0.1:8080:8080 \
-		-p 28015:28015 \
-		-p 29015:29015 \
+		-p $(/sbin/ifconfig tun0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'):8080:8080 \
+		-p $(/sbin/ifconfig tun0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'):28015:28015 \
+		-p $(/sbin/ifconfig tun0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'):29015:29015 \
 		-v /data/rethinkdb:/data \
 		dockerfile/rethinkdb \
 		rethinkdb \
