@@ -24,6 +24,6 @@ docker run \
 	-slack_url=https://hooks.slack.com/services/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 \
 	-slack_level=warn \
 	-slack_username=api.lavaboom.co \
-    -redis_address=10.8.0.2:6379 \
-    -redis_db=3 \
-    -nats_address=nats://10.8.0.2:4222
+	-redis_address=10.8.0.2:6379 \
+	-redis_db=3 \
+	-nats_address=nats://10.8.0.2:4222
