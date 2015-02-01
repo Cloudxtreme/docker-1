@@ -37,5 +37,5 @@ else
 			--bind all \
 			--canonical-address $REAL_IP \
 			--machine-name `hostname | sed 's/-/_/g'` #\
-#			$RETHINKDB_JOIN_CMD
+			$RETHINKDB_JOIN_CMD
 fi
