@@ -22,7 +22,7 @@ docker run \
 	-etcd_key_file=/keys/lisa.key \
 	-etcd_path=api-staging/ \
 	-slack_url=https://hooks.slack.com/services/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 \
-	-slack_levels=warn \
+	-slack_level=warn \
 	-slack_username=api.lavaboom.io \
     -redis_address=10.8.0.2:6379 \
     -redis_db=2 \
