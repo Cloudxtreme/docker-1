@@ -36,6 +36,6 @@ else
 		rethinkdb \
 			--bind all \
 			--canonical-address $REAL_IP \
-			--machine-name `hostname | sed 's/-/_/g'` \
+			--server-name `hostname | sed 's/-/_/g'` \
 			$RETHINKDB_JOIN_CMD
 fi
