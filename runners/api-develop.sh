@@ -22,4 +22,7 @@ docker run \
         -etcd_ca_file=/keys/ca.crt \
         -etcd_cert_file=/keys/lisa.crt \
         -etcd_key_file=/keys/lisa.key \
-        -etcd_path=api-develop/
+        -etcd_path=api-develop/ \
+	-slack_url=https://hooks.slack.com/services/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 \
+	-slack_levels=warn \
+	-slack_username=api.lavaboom.co
