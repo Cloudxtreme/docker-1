@@ -27,4 +27,4 @@ docker run \
 	-redis_address=10.8.0.2:6379 \
 	-redis_db=3 \
 	-lookupd_address=10.8.0.2:4161 \
-	-nsqd_address=10.8.0.2:4151
+	-nsqd_address=10.8.0.2:4150
