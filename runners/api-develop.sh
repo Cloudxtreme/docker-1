@@ -26,5 +26,5 @@ docker run \
 	-slack_username=api.lavaboom.co \
 	-redis_address=10.8.0.2:6379 \
 	-redis_db=3 \
-	-lookupd_address=10.8.0.2:4160 \
-	-nsqd_address=10.8.0.2:4150
+	-lookupd_address=10.8.0.2:4161 \
+	-nsqd_address=10.8.0.2:4151
