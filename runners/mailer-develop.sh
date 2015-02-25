@@ -6,7 +6,7 @@ docker run \
 	-e "RETHINKDB_KEY=d0llad0llabilly4ll_rethinkdb" \
 	-e "RETHINKDB_DB=dev" \
 	-e "LOOKUPD_ADDR=10.8.0.2:4161" \
-	-e "ETCD_ADDR=10.8.0.2:4150" \
+	-e "NSQD_ADDR=10.8.0.2:4150" \
 	-v /opt/api-keys:/keys \
 	--link rethinkdb:rethinkdb \
 	--name mailer-develop \
