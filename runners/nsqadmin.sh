@@ -4,4 +4,4 @@ docker run \
 	--name nsqadmin \
 	nsqio/nsq \
 	/nsqadmin \
-	--lookupd-tcp-address=10.8.0.2:4160
+	--lookupd-http-address=10.8.0.2:4161
