@@ -8,7 +8,7 @@ docker run \
 	-d \
 	-p 127.0.0.1:10000:5000 \
 	-e "RETHINKDB_AUTHKEY=d0llad0llabilly4ll_rethinkdb" \
-	-e "RETHINKDB_DB=dev" \
+	-e "RETHINKDB_DB=prod" \
 	-e "API_HOST=api.lavaboom.com" \
 	-e "EMAIL_DOMAIN=lavaboom.com" \
 	-v /opt/api-keys:/keys \
@@ -26,5 +26,5 @@ docker run \
 	-slack_username=api.lavaboom.com \
 	-redis_address=10.8.0.2:6379 \
 	-redis_db=1 \
-	-lookupd_address=10.8.0.2:4161 \
-	-nsqd_address=10.8.0.2:4150
+	-lookupd_address=10.8.0.1:4161 \
+	-nsqd_address=10.8.0.1:4150

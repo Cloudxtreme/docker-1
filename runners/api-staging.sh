@@ -8,7 +8,7 @@ docker run \
 	-d \
 	-p 127.0.0.1:10001:5000 \
 	-e "RETHINKDB_AUTHKEY=d0llad0llabilly4ll_rethinkdb" \
-	-e "RETHINKDB_DB=dev" \
+	-e "RETHINKDB_DB=staging" \
 	-e "API_HOST=api.lavaboom.io" \
 	-e "EMAIL_DOMAIN=lavaboom.io" \
 	-v /opt/api-keys:/keys \
