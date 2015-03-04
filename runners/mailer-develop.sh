@@ -12,6 +12,7 @@ docker run \
 	-e "DKIM_SELECTOR=mailer" \
 	-e "HOSTNAME=lavaboom.co" \
 	-v /opt/api-keys:/keys \
+	--restart always \
 	--link rethinkdb:rethinkdb \
 	--name mailer-golang \
 	registry.lavaboom.io/lavaboom/mailer-golang
