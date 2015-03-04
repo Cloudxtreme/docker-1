@@ -10,6 +10,7 @@ docker run \
 	-e "SMTP_ADDRESS=10.8.0.1:2525" \
 	-e "DKIM_KEY=/keys/mailer.key" \
 	-e "DKIM_SELECTOR=mailer" \
+	-e "HOSTNAME=lavaboom.com" \
 	-v /opt/api-keys:/keys \
 	--link rethinkdb:rethinkdb \
 	--name mailer-golang \
