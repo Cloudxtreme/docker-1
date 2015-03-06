@@ -8,6 +8,7 @@ docker run \
 	-e "NSQD_ADDRESS=10.8.0.3:4150" \
 	-e "LOOKUPD_ADDRESS=10.8.0.3:4161" \
 	-e "SMTP_ADDRESS=10.8.0.3:2525" \
+	-e "SPAMD_ADDRESS=10.8.0.3:783" \
 	-e "DKIM_KEY=/keys/mailer.key" \
 	-e "DKIM_SELECTOR=mailer" \
 	-e "HOSTNAME=lavaboom.co" \
