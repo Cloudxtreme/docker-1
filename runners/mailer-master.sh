@@ -5,10 +5,10 @@ docker run \
 	-p 25:25 \
 	-e "RETHINKDB_KEY=d0llad0llabilly4ll_rethinkdb" \
 	-e "RETHINKDB_DB=prod" \
-	-e "NSQD_ADDRESS=10.8.0.1:4150" \
-	-e "LOOKUPD_ADDRESS=10.8.0.1:4161" \
-	-e "SMTP_ADDRESS=10.8.0.1:2525" \
-	-e "SPAMD_ADDRESS=10.8.0.1:783" \
+	-e "NSQD_ADDRESS=172.16.0.1:4150" \
+	-e "LOOKUPD_ADDRESS=172.16.0.1:4161" \
+	-e "SMTP_ADDRESS=172.16.0.1:2525" \
+	-e "SPAMD_ADDRESS=172.16.0.1:783" \
 	-e "DKIM_KEY=/keys/mailer.key" \
 	-e "DKIM_SELECTOR=mailer" \
 	-e "HOSTNAME=lavaboom.com" \
