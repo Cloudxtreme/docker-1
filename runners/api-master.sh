@@ -7,19 +7,16 @@ DEBIAN_FRONTEND=noninteractive
 docker run \
 	-d \
 	-p 127.0.0.1:10000:5000 \
-	-e "RETHINKDB_AUTHKEY=d0llad0llabilly4ll_rethinkdb" \
 	-e "RETHINKDB_DB=prod" \
 	-e "API_HOST=api.lavaboom.com" \
 	-e "EMAIL_DOMAIN=lavaboom.com" \
 	-v /opt/api-keys:/keys \
-	--link rethinkdb:rethinkdb \
 	--name api-master \
-	registry.lavaboom.io/lavaboom/api-master \
-	-loggly_token=4775dd8a-72a1-4c28-aeb6-7fe7d18b3215 \
-	-slack_url=https://hooks.slack.com/services/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 \
-	-slack_level=warn \
-	-slack_username=api.lavaboom.com \
+	lavab/api \
 	-redis_address=172.16.0.1:6379 \
 	-redis_db=1 \
 	-lookupd_address=172.16.0.1:4161 \
-	-nsqd_address=172.16.0.1:4150
+	-nsqd_address=172.16.0.1:4150 \
+	-rethinkdb_address=172.16.0.1:28015 \
+	-bloom_filter=/keys/bloom.db \
+	-raven_dsn=https://aaab917804ac489ea883e63312bf96ca:bdccb64b394344df8f2eeac8ad90fc81@sentry.lavaboom.io/4

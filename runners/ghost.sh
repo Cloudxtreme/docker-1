@@ -12,7 +12,7 @@ if [ -z "$GHOST_PORT" ]; then
 fi
 
 if [ -z "$GHOST_DATA" ]; then
-	GHOST_DATA='/data/ghost'
+	GHOST_DATA='/opt/blog'
 fi
 
 echo "Running Ghost on port $GHOST_PORT and data directory $GHOST_DATA ..."
