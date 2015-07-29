@@ -4,9 +4,7 @@ lanIP=$(/sbin/ifconfig eth1 | grep "inet addr" | awk -F: '{print $2}' | awk '{pr
 
 docker run \
 	-d \
-	-e "RETHINKDB_DB=prod" \
-	-e "RETHINKDB_ADDRESS=$lanIP:28015" \
-	-e "LOOKUPD_ADDRESS=$lanIP:4161" \
+	-p $lanIP:10010:80 \
+	--name web-master \
 	--restart always \
-	--name webhook \
-	quay.io/lavab/webhook
+	quay.io/lavab/web

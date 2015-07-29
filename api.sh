@@ -10,7 +10,8 @@ docker run \
 	-e "EMAIL_DOMAIN=lavaboom.com" \
 	-v /opt/api-keys:/keys \
 	--name api-master \
-	lavab/api \
+	--restart always \
+	quay.io/lavab/api \
 	-redis_address=$lanIP:6379 \
 	-redis_db=1 \
 	-lookupd_address=$lookupdIP:4161 \
