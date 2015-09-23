@@ -1,4 +1,4 @@
-lanIP=$(/sbin/ifconfig eth1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}')
+lanIP=$(/sbin/ifconfig docker0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}')
 docker run \
 	-d \
 	-p $lanIP:783:783 \

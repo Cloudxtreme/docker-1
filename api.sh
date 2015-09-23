@@ -1,13 +1,11 @@
 DEBIAN_FRONTEND=noninteractive
 
-lanIP=$(/sbin/ifconfig eth1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}')
+lanIP=$(/sbin/ifconfig docker0 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}')
 lookupdIP=$lanIP
 docker run \
 	-d \
 	-p $lanIP:10000:5000 \
 	-e "RETHINKDB_DB=prod" \
-	-e "API_HOST=api.lavaboom.com" \
-	-e "EMAIL_DOMAIN=lavaboom.com" \
 	-v /opt/api-keys:/keys \
 	--name api-master \
 	--restart always \
